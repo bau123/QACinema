@@ -52,24 +52,35 @@ public class GUI extends JFrame{
         final JTextField textField = new JTextField(10);
         textField.addKeyListener(new KeyListener() {
             public void keyTyped(KeyEvent e) {
+                if (e.getKeyChar() == '0' || e.getKeyChar() == '1' || e.getKeyChar() == '2' || e.getKeyChar() == '3' || e.getKeyChar() == '4' || e.getKeyChar() == '5' |e.getKeyChar() == '6'
+                        ||e.getKeyChar() == '7' ||e.getKeyChar() == '8' || e.getKeyChar() == '9')
+                {
 
+                } else {
+                    e.consume();
+                }
             }
 
             public void keyPressed(KeyEvent e) {
             }
 
             public void keyReleased(KeyEvent e) {
-                    if (ticket == STANDARD){
-                        stnAmount = Integer.parseInt(Character.toString(e.getKeyChar()));
+                if (ticket == STANDARD){
+                    System.out.println(textField.getText());
+                    stnAmount = Integer.parseInt(textField.getText());
+
                 }
                 if (ticket == OAP){
                     OAPAmount = Integer.parseInt(Character.toString(e.getKeyChar()));
+                    System.out.println(OAPAmount);
                 }
                 if (ticket == STUDENT){
                     studentAmount = Integer.parseInt(Character.toString(e.getKeyChar()));
+                    System.out.println(studentAmount);
                 }
                 if (ticket == CHILD){
                     childAmount = Integer.parseInt(Character.toString(e.getKeyChar()));
+                    System.out.println(childAmount);
                 }
 
             }

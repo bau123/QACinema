@@ -13,9 +13,9 @@ public class GUI extends JFrame{
     private int childAmount;
 
     private final static String STANDARD = "Standard: £8";
-    private final static String OAP = "OAP £6";
-    private final static String STUDENT = "Student £6";
-    private final static String CHILD = "Child £4";
+    private final static String OAP = "OAP: £6";
+    private final static String STUDENT = "Student: £6";
+    private final static String CHILD = "Child: £4";
 
     public GUI(){
         setLayout(new GridLayout(7,1));
@@ -40,8 +40,8 @@ public class GUI extends JFrame{
     private JPanel getPanelHeader(){
         JLabel labelTicketPrice, labelAmount, labelFakePad;
 
-        labelTicketPrice = new JLabel("Ticket Prices");
-        labelFakePad = new JLabel("         ");
+        labelTicketPrice = new JLabel("Ticket Prices per person");
+        labelFakePad = new JLabel("   ");
         labelAmount = new JLabel("Amount to buy");
         JPanel panel = new JPanel();
         panel.setLayout(new FlowLayout());

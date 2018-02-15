@@ -3,7 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="96868445-2221-48ca-90b7-4688a690989e" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/src/main/java/GUI.java" afterPath="$PROJECT_DIR$/src/main/java/GUI.java" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/TicketTest.java" afterPath="$PROJECT_DIR$/src/test/java/TicketTest.java" />
+      <change beforePath="$PROJECT_DIR$/target/classes/GUI$1.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/GUI$2.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/GUI.class" afterPath="" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -28,16 +30,15 @@
       <file leaf-file-name="GUI.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/GUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="17" column="57" lean-forward="false" selection-start-line="17" selection-start-column="57" selection-end-line="17" selection-end-column="57" />
+            <state relative-caret-position="315">
+              <caret line="43" column="36" lean-forward="false" selection-start-line="43" selection-start-column="36" selection-end-line="43" selection-end-column="36" />
               <folding>
                 <element signature="method#GUI#0;class#GUI#0" expanded="false" />
-                <element signature="method#getPanelHeader#0;class#GUI#0" expanded="false" />
                 <element signature="method#getPanelTicket#0;class#GUI#0" expanded="false" />
                 <element signature="method#getPanelDay#0;class#GUI#0" expanded="false" />
                 <element signature="method#getResultPanel#0;class#GUI#0" expanded="false" />
-                <element signature="e#4781#4933#0" expanded="true" />
-                <element signature="e#4932#4933#0" expanded="true" />
+                <element signature="e#4742#4894#0" expanded="true" />
+                <element signature="e#4893#4894#0" expanded="true" />
                 <element signature="method#getTotalPrice#0;class#GUI#0" expanded="false" />
               </folding>
             </state>
@@ -510,16 +511,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/GUI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="17" column="57" lean-forward="false" selection-start-line="17" selection-start-column="57" selection-end-line="17" selection-end-column="57" />
+        <state relative-caret-position="315">
+          <caret line="43" column="36" lean-forward="false" selection-start-line="43" selection-start-column="36" selection-end-line="43" selection-end-column="36" />
           <folding>
             <element signature="method#GUI#0;class#GUI#0" expanded="false" />
-            <element signature="method#getPanelHeader#0;class#GUI#0" expanded="false" />
             <element signature="method#getPanelTicket#0;class#GUI#0" expanded="false" />
             <element signature="method#getPanelDay#0;class#GUI#0" expanded="false" />
             <element signature="method#getResultPanel#0;class#GUI#0" expanded="false" />
-            <element signature="e#4781#4933#0" expanded="true" />
-            <element signature="e#4932#4933#0" expanded="true" />
+            <element signature="e#4742#4894#0" expanded="true" />
+            <element signature="e#4893#4894#0" expanded="true" />
             <element signature="method#getTotalPrice#0;class#GUI#0" expanded="false" />
           </folding>
         </state>

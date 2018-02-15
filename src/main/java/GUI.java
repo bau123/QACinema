@@ -151,6 +151,9 @@ public class GUI extends JFrame{
         int student = 6 * studentAmount;
         int child = 4 * childAmount;
         i = stn + OAP + student + child + i;
+        if (stn == 0 && OAP == 0 && student == 0 && child == 0){
+            i = 0;
+        }
         total = "Total cost: £" +i;
         return total;
     }

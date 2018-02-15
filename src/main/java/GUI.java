@@ -1,11 +1,8 @@
-import com.sun.org.apache.xalan.internal.xsltc.runtime.ErrorMessages;
-
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
 
 public class GUI extends JFrame{
 
@@ -21,24 +18,16 @@ public class GUI extends JFrame{
     private final static String CHILD = "Child £4";
 
     public GUI(){
-        JLabel labelTicketPrice, labelAmount;
-
         setLayout(new GridLayout(7,1));
-        labelTicketPrice = new JLabel("Ticket Prices");
-        labelAmount = new JLabel("Amount to buy");
-        JPanel panelInfo = new JPanel();
-        panelInfo.setLayout(new FlowLayout());
-        panelInfo.add(labelTicketPrice);
-        panelInfo.add(labelAmount);
 
 
-        add(panelInfo);
+        add(getPanelHeader());
 
-        add(getPanel(STANDARD));
-        add(getPanel(OAP));
-        add(getPanel(STUDENT));
-        add(getPanel(CHILD));
-        add(getDayPanel());
+        add(getPanelTicket(STANDARD));
+        add(getPanelTicket(OAP));
+        add(getPanelTicket(STUDENT));
+        add(getPanelTicket(CHILD));
+        add(getPanelDay());
         add(getResultPanel());
 
         setVisible(true);
@@ -48,10 +37,25 @@ public class GUI extends JFrame{
 
     }
 
-    private JPanel getPanel(final String ticket) {
+    private JPanel getPanelHeader(){
+        JLabel labelTicketPrice, labelAmount, labelFakePad;
+
+        labelTicketPrice = new JLabel("Ticket Prices");
+        labelFakePad = new JLabel("         ");
+        labelAmount = new JLabel("Amount to buy");
         JPanel panel = new JPanel();
         panel.setLayout(new FlowLayout());
-        JLabel label = new JLabel(ticket);
+        panel.add(labelTicketPrice);
+        panel.add(labelFakePad);
+        panel.add(labelAmount);
+        return panel;
+    }
+
+    private JPanel getPanelTicket(final String ticketType) {
+        JPanel panel = new JPanel();
+        JLabel labelFakePad = new JLabel("          ");
+        panel.setLayout(new FlowLayout());
+        JLabel label = new JLabel(ticketType);
         final JTextField textField = new JTextField(10);
         textField.setText("0");
         textField.addKeyListener(new OnlyNumberListener(textField) {
@@ -59,19 +63,19 @@ public class GUI extends JFrame{
             @Override
             public void keyReleased(KeyEvent e) {
                 try {
-                    if (ticket == STANDARD) {
+                    if (ticketType == STANDARD) {
                         stnAmount = Integer.parseInt(textField.getText());
 
                     }
-                    if (ticket == OAP) {
+                    if (ticketType == OAP) {
                         OAPAmount = Integer.parseInt(textField.getText());
                         System.out.println(OAPAmount);
                     }
-                    if (ticket == STUDENT) {
+                    if (ticketType == STUDENT) {
                         studentAmount = Integer.parseInt(textField.getText());
                         System.out.println(studentAmount);
                     }
-                    if (ticket == CHILD) {
+                    if (ticketType == CHILD) {
                         childAmount = Integer.parseInt(textField.getText());
                         System.out.println(childAmount);
                     }
@@ -83,11 +87,11 @@ public class GUI extends JFrame{
             }
         });
         panel.add(label);
+        panel.add(labelFakePad);
         panel.add(textField);
         return panel;
     }
-    private JPanel getDayPanel(){
-
+    private JPanel getPanelDay(){
         JPanel panel = new JPanel();
         panel.setLayout(new FlowLayout());
         JRadioButton mon, tues, wed, thurs, fri, sat, sun;
@@ -130,11 +134,13 @@ public class GUI extends JFrame{
 
     }
     private JPanel getResultPanel(){
+        JLabel labelFakePad = new JLabel("      ");
         JPanel panel = new JPanel();
         panel.setLayout(new FlowLayout());
         JButton btn = new JButton("Get my price");
         final JLabel answer = new JLabel("Result");
         panel.add(btn);
+        panel.add(labelFakePad);
         panel.add(answer);
 
         btn.addActionListener(new ActionListener() {

@@ -1,3 +1,5 @@
+import com.sun.org.apache.xalan.internal.xsltc.runtime.ErrorMessages;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -13,10 +15,10 @@ public class GUI extends JFrame{
     private int studentAmount;
     private int childAmount;
 
-    private static String STANDARD = "Standard: £8";
-    private static String OAP = "OAP £6";
-    private static String STUDENT = "Student £6";
-    private static String CHILD = "Child £4";
+    private final static String STANDARD = "Standard: £8";
+    private final static String OAP = "OAP £6";
+    private final static String STUDENT = "Student £6";
+    private final static String CHILD = "Child £4";
 
     public GUI(){
         JLabel labelTicketPrice, labelAmount;
@@ -56,30 +58,32 @@ public class GUI extends JFrame{
 
             @Override
             public void keyReleased(KeyEvent e) {
-                if (ticket == STANDARD){
-                    stnAmount = Integer.parseInt(textField.getText());
+                try {
+                    if (ticket == STANDARD) {
+                        stnAmount = Integer.parseInt(textField.getText());
 
-                }
-                if (ticket == OAP){
-                    OAPAmount = Integer.parseInt(textField.getText());
-                    System.out.println(OAPAmount);
-                }
-                if (ticket == STUDENT){
-                    studentAmount = Integer.parseInt(textField.getText());
-                    System.out.println(studentAmount);
-                }
-                if (ticket == CHILD){
-                    childAmount = Integer.parseInt(textField.getText());
-                    System.out.println(childAmount);
+                    }
+                    if (ticket == OAP) {
+                        OAPAmount = Integer.parseInt(textField.getText());
+                        System.out.println(OAPAmount);
+                    }
+                    if (ticket == STUDENT) {
+                        studentAmount = Integer.parseInt(textField.getText());
+                        System.out.println(studentAmount);
+                    }
+                    if (ticket == CHILD) {
+                        childAmount = Integer.parseInt(textField.getText());
+                        System.out.println(childAmount);
+                    }
+                } catch (Exception useless) {
+                    //Maybe add pop up to warn user
+                    System.out.println("Only text Please");
                 }
 
             }
         });
         panel.add(label);
         panel.add(textField);
-
-
-
         return panel;
     }
     private JPanel getDayPanel(){

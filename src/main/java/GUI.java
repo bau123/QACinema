@@ -7,7 +7,6 @@ import java.awt.event.KeyListener;
 
 public class GUI extends JFrame{
 
-    private JLabel labelTicketPrice, labelAmount;
     public static boolean wedDeal;
     private int stnAmount;
     private int OAPAmount;
@@ -20,6 +19,8 @@ public class GUI extends JFrame{
     private static String CHILD = "Child £4";
 
     public GUI(){
+        JLabel labelTicketPrice, labelAmount;
+
         setLayout(new GridLayout(7,1));
         labelTicketPrice = new JLabel("Ticket Prices");
         labelAmount = new JLabel("Amount to buy");
@@ -51,20 +52,9 @@ public class GUI extends JFrame{
         JLabel label = new JLabel(ticket);
         final JTextField textField = new JTextField(10);
         textField.setText("0");
-        textField.addKeyListener(new KeyListener() {
-            public void keyTyped(KeyEvent e) {
-                if (e.getKeyChar() == '0' || e.getKeyChar() == '1' || e.getKeyChar() == '2' || e.getKeyChar() == '3' || e.getKeyChar() == '4' || e.getKeyChar() == '5' |e.getKeyChar() == '6'
-                        ||e.getKeyChar() == '7' ||e.getKeyChar() == '8' || e.getKeyChar() == '9')
-                {
+        textField.addKeyListener(new OnlyNumberListener(textField) {
 
-                } else {
-                    e.consume();
-                }
-            }
-
-            public void keyPressed(KeyEvent e) {
-            }
-
+            @Override
             public void keyReleased(KeyEvent e) {
                 if (ticket == STANDARD){
                     stnAmount = Integer.parseInt(textField.getText());

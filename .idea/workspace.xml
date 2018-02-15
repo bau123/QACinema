@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="96868445-2221-48ca-90b7-4688a690989e" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/src/main/java/GUI.java" afterPath="$PROJECT_DIR$/src/main/java/GUI.java" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/TicketTest.java" afterPath="$PROJECT_DIR$/src/test/java/TicketTest.java" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -27,11 +28,17 @@
       <file leaf-file-name="GUI.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/GUI.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="142" column="32" lean-forward="false" selection-start-line="142" selection-start-column="32" selection-end-line="142" selection-end-column="32" />
+            <state relative-caret-position="195">
+              <caret line="17" column="57" lean-forward="false" selection-start-line="17" selection-start-column="57" selection-end-line="17" selection-end-column="57" />
               <folding>
-                <element signature="e#4734#4886#0" expanded="true" />
-                <element signature="e#4885#4886#0" expanded="true" />
+                <element signature="method#GUI#0;class#GUI#0" expanded="false" />
+                <element signature="method#getPanelHeader#0;class#GUI#0" expanded="false" />
+                <element signature="method#getPanelTicket#0;class#GUI#0" expanded="false" />
+                <element signature="method#getPanelDay#0;class#GUI#0" expanded="false" />
+                <element signature="method#getResultPanel#0;class#GUI#0" expanded="false" />
+                <element signature="e#4781#4933#0" expanded="true" />
+                <element signature="e#4932#4933#0" expanded="true" />
+                <element signature="method#getTotalPrice#0;class#GUI#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -53,8 +60,8 @@
       <file leaf-file-name="TicketTest.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/TicketTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="13" lean-forward="false" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+            <state relative-caret-position="165">
+              <caret line="11" column="32" lean-forward="false" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -65,7 +72,7 @@
       <file leaf-file-name="ButtonDeal.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/ButtonDeal.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
+            <state relative-caret-position="-8">
               <caret line="9" column="147" lean-forward="false" selection-start-line="9" selection-start-column="147" selection-end-line="9" selection-end-column="147" />
               <folding />
             </state>
@@ -94,8 +101,8 @@
       <list>
         <option value="$PROJECT_DIR$/src/main/java/Cinema.java" />
         <option value="$PROJECT_DIR$/src/main/java/OnlyNumberListener.java" />
-        <option value="$PROJECT_DIR$/src/test/java/TicketTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/ButtonDeal.java" />
+        <option value="$PROJECT_DIR$/src/test/java/TicketTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/GUI.java" />
       </list>
     </option>
@@ -464,21 +471,29 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/ButtonDeal.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/Cinema.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="9" column="147" lean-forward="false" selection-start-line="9" selection-start-column="147" selection-end-line="9" selection-end-column="147" />
+        <state relative-caret-position="0">
+          <caret line="0" column="16" lean-forward="false" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="16" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/TicketTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="13" lean-forward="false" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+        <state relative-caret-position="165">
+          <caret line="11" column="32" lean-forward="false" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/ButtonDeal.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-8">
+          <caret line="9" column="147" lean-forward="false" selection-start-line="9" selection-start-column="147" selection-end-line="9" selection-end-column="147" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -493,21 +508,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Cinema.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="16" lean-forward="false" selection-start-line="0" selection-start-column="16" selection-end-line="0" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/GUI.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="142" column="32" lean-forward="false" selection-start-line="142" selection-start-column="32" selection-end-line="142" selection-end-column="32" />
+        <state relative-caret-position="195">
+          <caret line="17" column="57" lean-forward="false" selection-start-line="17" selection-start-column="57" selection-end-line="17" selection-end-column="57" />
           <folding>
-            <element signature="e#4734#4886#0" expanded="true" />
-            <element signature="e#4885#4886#0" expanded="true" />
+            <element signature="method#GUI#0;class#GUI#0" expanded="false" />
+            <element signature="method#getPanelHeader#0;class#GUI#0" expanded="false" />
+            <element signature="method#getPanelTicket#0;class#GUI#0" expanded="false" />
+            <element signature="method#getPanelDay#0;class#GUI#0" expanded="false" />
+            <element signature="method#getResultPanel#0;class#GUI#0" expanded="false" />
+            <element signature="e#4781#4933#0" expanded="true" />
+            <element signature="e#4932#4933#0" expanded="true" />
+            <element signature="method#getTotalPrice#0;class#GUI#0" expanded="false" />
           </folding>
         </state>
       </provider>

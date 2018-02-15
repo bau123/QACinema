@@ -4,9 +4,13 @@ import org.junit.Test;
 public class TicketTest {
 
     boolean wedDeal;
+    //Gimme a value
     private int stnAmount = 1;
+    //Gimme a value
     private int OAPAmount = 0;
-    private int studentAmount =1;
+    //Gimme a value
+    private int studentAmount = 1;
+    //Gimme a value
     private int childAmount = 1;
 
     @Test

@@ -50,6 +50,7 @@ public class GUI extends JFrame{
         panel.setLayout(new FlowLayout());
         JLabel label = new JLabel(ticket);
         final JTextField textField = new JTextField(10);
+        textField.setText("0");
         textField.addKeyListener(new KeyListener() {
             public void keyTyped(KeyEvent e) {
                 if (e.getKeyChar() == '0' || e.getKeyChar() == '1' || e.getKeyChar() == '2' || e.getKeyChar() == '3' || e.getKeyChar() == '4' || e.getKeyChar() == '5' |e.getKeyChar() == '6'
@@ -131,7 +132,6 @@ public class GUI extends JFrame{
         panel.add(fri);
         panel.add(sat);
         panel.add(sun);
-
         return panel;
 
     }
@@ -145,18 +145,23 @@ public class GUI extends JFrame{
 
         btn.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                int i = 0;
-                if (wedDeal){
-                    i = -2;
-                }
-                int stn = 8 * stnAmount;
-                int OAP = 6 * OAPAmount;
-                int student = 6 * studentAmount;
-                int child = 4 * childAmount;
-                i = stn + OAP + student + child + i;
-                answer.setText("Total cost: £" +i);
+                answer.setText(getTotalPrice());
             }
         });
         return panel;
+    }
+    private String getTotalPrice(){
+        String total;
+        int i = 0;
+        if (wedDeal){
+            i = -2;
+        }
+        int stn = 8 * stnAmount;
+        int OAP = 6 * OAPAmount;
+        int student = 6 * studentAmount;
+        int child = 4 * childAmount;
+        i = stn + OAP + student + child + i;
+        total = "Total cost: £" +i;
+        return total;
     }
 }

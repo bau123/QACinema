@@ -66,20 +66,19 @@ public class GUI extends JFrame{
 
             public void keyReleased(KeyEvent e) {
                 if (ticket == STANDARD){
-                    System.out.println(textField.getText());
                     stnAmount = Integer.parseInt(textField.getText());
 
                 }
                 if (ticket == OAP){
-                    OAPAmount = Integer.parseInt(Character.toString(e.getKeyChar()));
+                    OAPAmount = Integer.parseInt(textField.getText());
                     System.out.println(OAPAmount);
                 }
                 if (ticket == STUDENT){
-                    studentAmount = Integer.parseInt(Character.toString(e.getKeyChar()));
+                    studentAmount = Integer.parseInt(textField.getText());
                     System.out.println(studentAmount);
                 }
                 if (ticket == CHILD){
-                    childAmount = Integer.parseInt(Character.toString(e.getKeyChar()));
+                    childAmount = Integer.parseInt(textField.getText());
                     System.out.println(childAmount);
                 }
 
@@ -139,7 +138,7 @@ public class GUI extends JFrame{
     private JPanel getResultPanel(){
         JPanel panel = new JPanel();
         panel.setLayout(new FlowLayout());
-        JButton btn = new JButton();
+        JButton btn = new JButton("Get my price");
         final JLabel answer = new JLabel("Result");
         panel.add(btn);
         panel.add(answer);
@@ -155,7 +154,7 @@ public class GUI extends JFrame{
                 int student = 6 * studentAmount;
                 int child = 4 * childAmount;
                 i = stn + OAP + student + child + i;
-                answer.setText(i+"");
+                answer.setText("Total cost: £" +i);
             }
         });
         return panel;
